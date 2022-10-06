@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            font-weight: normal;
+            background-color: green;
+            color: black;
+            padding: 10px;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onmouseenter="entrou()" onmouseout="saiu()">
+        Interaja...
+    </div>
+
+    <script>
+        function entrou(){
+            var muda = document.querySelector('div#area')
+            muda.style.backgroundColor = 'black'
+            muda.style.color = 'white'
+            muda.innerText = 'Uau!!'
+        }
+        function saiu(){
+            var muda = document.querySelector('div#area')
+            muda.style.backgroundColor = 'blue'
+            muda.style.color = 'pink'
+            muda.innerText = 'Volta o mouse'
+        }
+    </script>
+</body>
+</html>
