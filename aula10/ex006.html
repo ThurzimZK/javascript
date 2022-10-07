@@ -21,22 +21,30 @@
     </style>
 </head>
 <body>
-    <div id="area" onmouseenter="entrou()" onmouseout="saiu()">
+    <div id="area">
         Interaja...
     </div>
 
     <script>
-        function entrou(){
-            var muda = document.querySelector('div#area')
-            muda.style.backgroundColor = 'black'
-            muda.style.color = 'white'
-            muda.innerText = 'Uau!!'
+        var a = document.querySelector('div#area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.style.backgroundColor = 'yellow'
+            a.style.color = 'red'
+            a.innerText = 'Clicou!'
         }
-        function saiu(){
-            var muda = document.querySelector('div#area')
-            muda.style.backgroundColor = 'blue'
-            muda.style.color = 'pink'
-            muda.innerText = 'Volta o mouse'
+        function entrar(){
+            a.style.backgroundColor = 'black'
+            a.style.color = 'white'
+            a.innerText = 'Entrou!'
+        }
+        function sair(){
+            a.style.backgroundColor = 'blue'
+            a.style.color = 'pink'
+            a.innerText = 'Saiu!'
         }
     </script>
 </body>
