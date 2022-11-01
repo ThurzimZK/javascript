@@ -18,7 +18,4 @@ function clicou() {
     input.setAttribute('type', 'text')
     botao.innerHTML = 'Ocultar senha'
    }
-   
-
-
 }
