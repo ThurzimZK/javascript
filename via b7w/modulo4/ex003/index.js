@@ -38,6 +38,12 @@ class Person {
     get age() {
         return this._age
     }
+    
+    set age(x){
+        if(typeof x == 'number') {
+            this._age = x
+        }
+    }
 }
 
 let p1 = new Person('joao', 'Silva', 18)
@@ -49,5 +55,6 @@ console.log(`${p1.fullName} tem ${p1.age} anos`);
 
 p1.takeAStep()
 p1.takeAStep()
-console.log(`Passos de ${p1.fullName}: ${p1.steps}`);
+p1.age = 15
+console.log(`Passos de ${p1.fullName}: ${p1.steps}, anos ${p1.age}`);
 console.log(`Passos de ${p2.fullName}: ${p2.steps}`);
